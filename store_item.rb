@@ -37,3 +37,4 @@ product_2 = Store.new(item: "frame",
                       color: "brown", 
                       price: 19)
 
+
