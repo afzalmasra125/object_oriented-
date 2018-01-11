@@ -9,8 +9,8 @@
 # employee_2 = {first_name: "Diana", last_name: "Prince", salary: 70000, active: => true }
 
 # puts "#{employee_1[:first_name]} #{employee_1[:last_name]} makes {employee_1[:salary]} a year"
-# puts "#{employee_2[:first_name]} #{employee_2[:last_name]} makes {employee_2[:salary]} a year"
-
+# puts "#{employee_2[:first_name]} #{employee_2[:last_name]} makes {employee_2[:salary]} a year" 
+module Actualize
 class Employee
   attr_reader :first_name, :last_name, :salary, :active
   attr_writer :active
@@ -41,55 +41,8 @@ class Employee
   # def active=(active)
   #   @active=active
   # end
-end
-
-employee_1 = Employee.new(:first_name => "Bruce", 
-                          :last_name => "Wayne", 
-                          :salary => 70000, 
-                          :active => true)
-employee_2 = Employee.new(:first_name => "Diana", 
-                          :last_name => "Prince", 
-                          :salary => 100000, 
-                          :active => true)
-employee_1.print_info
-employee_2.print_info
-p employee_1.active
-employee_1.active = false
-
-class Manager < Employee
-  def initialize(input_options)
-    super(input_options)
-    @employees = input_options[:employees]
-    end
-  def send_report
-    puts "Sending email..."
-      #code that sends email
-    puts "Email sent."
-   end 
-def give_all_raises
-    @employees.each do |employee|
-      @employees[i].give_annual_raise
-    end
   end
-  def fire_all_employees
-    @employees.each do |employee|
-     employee.active = false
-    end
-  end
-end
-manager = Manager.new(
-                      first_name: "Clark",
-                      last_name: "Kent",
-                      salary: 100000,
-                      active: true,
-                      employees: [employee_1, employee_2]
-                      )
-p employee_1.active
-p employee_2.active
-manager.fire_all_employees
-p employee_1.active
-p employee_2.active
-
+end 
 
 
 

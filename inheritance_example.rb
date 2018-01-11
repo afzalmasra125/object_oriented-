@@ -32,7 +32,6 @@ end
 class Bike < Vehicle
   def initialize(input_options)
     super()
-    @
     @type = input_options[:type]
     @weight = input_options[:new_weight]
   end 
